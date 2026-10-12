@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigInteger;
@@ -16,4 +17,20 @@ public class BigFractionTest {
     public void testParse() {
         BigFraction a = BigFraction.parse("-2/5");
     }
+
+
+    @Test
+    public void testEquals() {
+        BigFraction a = BigFraction.parse(  "-2/5");
+        BigFraction b = BigFraction.parse( "-2/5");
+        Assert.assertTrue(a.equals(b));
+    }
+
+    @Test
+    public void testLessthan () {
+        BigFraction a = BigFraction.parse("1/3");
+        BigFraction b = BigFraction.parse( "2/3");
+        Assert.assertTrue(BigFractions.isAlessthanB(a,b));
+    }
+
 }
