@@ -47,4 +47,13 @@ public class BigFraction {
         String denominatorStr = split[1];
         return new BigFraction(numeratorStr, denominatorStr);
     }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "(%s/%s)",
+                getNumerator().toString(),
+                getDenominator().toString()
+        );
+    }
 }
