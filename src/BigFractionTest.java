@@ -11,4 +11,9 @@ public class BigFractionTest {
         BigFraction d = new BigFraction(-3,8);
         BigFraction e = new BigFraction(new BigInteger("1"), new BigInteger("2"));
     }
+
+    @Test
+    public void testParse() {
+        BigFraction a = BigFraction.parse("-2/5");
+    }
 }

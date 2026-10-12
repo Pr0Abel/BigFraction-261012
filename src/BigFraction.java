@@ -40,4 +40,11 @@ public class BigFraction {
         setNumerator(numerator);
         setDenominator(denominator);
     }
+
+    public static BigFraction parse(String fractionStr) {
+        String[] split = fractionStr.split("/");
+        String numeratorStr = split[0];
+        String denominatorStr = split[1];
+        return new BigFraction(numeratorStr, denominatorStr);
+    }
 }
